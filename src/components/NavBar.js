@@ -3,6 +3,8 @@ import CartWidget from "./CartWidget.js";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link, NavLink } from "react-router-dom";
+
 function NavBar(){
     return (
         <>
@@ -20,9 +22,10 @@ function NavBar(){
             Cerveceria Patagonia
           </Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Cervezas</Nav.Link>
-            <Nav.Link href="#features">Comprar</Nav.Link>
-            <Nav.Link href="#pricing">Contacto</Nav.Link>
+            <NavLink to="/cervezas">Cervezas</NavLink>
+            <NavLink to="/cervezas/rubia">Rubias</NavLink>
+            <NavLink to="/cervezas/negras">Negras</NavLink>
+            <NavLink to="/cervezas/rojas">Rojas</NavLink>
           </Nav>
           <CartWidget />
         </Container>

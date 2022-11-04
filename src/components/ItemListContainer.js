@@ -1,12 +1,14 @@
 import React from "react";
+import Home from './Home';
 
 
-function ItemListContainer({ greeting }){
+
+function ItemListContainer(){
     
     return (
-        <div>
-        <p>Bienvenido {greeting.nombre}</p>
-        </div>     
+        <main>
+   
+    </main>   
  )
 }
 export default ItemListContainer
