@@ -1,17 +1,20 @@
-import React from "react";
-import './css/estilos.css';
-import Header from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer.js';
-import { BrowserRouter } from "react-router-dom";
-
+import React from "react"
+import Header from "./Header"
+import Main from "./Main"
+import Footer from "./Footer"
+import { BrowserRouter } from "react-router-dom"
+import { ToastContainer } from "react-toastify"
 
 function App() {
-  return (
-	
-	<BrowserRouter>
-	  <Header />
-	  <ItemListContainer/>	  
-	</BrowserRouter>
-  );
+
+    return (
+        <BrowserRouter>
+            <Header/>
+            <Main />
+            <Footer />
+            <ToastContainer/>
+        </BrowserRouter>
+    )
 }
-export default App;
+
+export default App
