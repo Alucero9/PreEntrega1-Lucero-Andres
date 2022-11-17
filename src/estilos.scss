@@ -96,3 +96,48 @@ footer {
     background-color: $color-primary;
     cursor: pointer;
 }
+.detail-flex  , .counter-actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.counter-actions {
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.detail-flex img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.counter-actions button {
+    background-color: $color-primary;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
+    margin: 0 1rem;
+}
+
+.detail-flex > div {
+    padding: 1rem;
+}
+
+.detail-flex > div > div {
+    margin: 1rem 0;
+}
+
+.detail-flex > div > div > button {
+    display: block;
+    margin: auto;
+    background-color: $color-primary;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.6);
+}

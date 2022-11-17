@@ -1,30 +1,24 @@
 import { randProduct } from "@ngneat/falso"
 
-let productosIniciales = []
+export let productosIniciales = []
 
 for (let i = 0; i < 10; i++) {
     productosIniciales.push(randProduct())
 }
 
-
-export const getProducts = () => {
-
-    let simulacionPedido = new Promise((res) => {
+const generatePromise = (operation,time = 2000) => {
+    return new Promise((resolve,reject) => {
         setTimeout(() => {
-            res(productosIniciales)
-        }, 2000)
+            resolve(operation)
+        }, time)
     })
-
-    return simulacionPedido
 }
 
-export const getProductByCategoryId = (id) => {
-    
-    let simulacionPedido = new Promise((res) => {
-        setTimeout(() => {
-            res(productosIniciales.filter(item=>item.category == id))
-        }, 2000)
-    })
+export const getProducts = () => generatePromise(productosIniciales)
 
-    return simulacionPedido
+export const getProductByCategoryId = (id) => generatePromise(productosIniciales.filter(item=>item.category == id))
+
+export default {
+    getProducts,
+    getProductByCategoryId
 }

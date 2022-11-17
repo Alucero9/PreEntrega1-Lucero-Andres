@@ -2,9 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import Nav from "./Nav"
 
-function Header() {
-    
-   
+function Header() {  
     return (
         <header id="main-header" className="header">
             <Link to="/" className="link">

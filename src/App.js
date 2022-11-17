@@ -4,16 +4,19 @@ import Main from "./Main"
 import Footer from "./Footer"
 import { BrowserRouter } from "react-router-dom"
 import { ToastContainer } from "react-toastify"
+import CustomProvider from "./CustomProvider"
 
 function App() {
 
     return (
-        <BrowserRouter>
-            <Header/>
-            <Main />
-            <Footer />
-            <ToastContainer/>
-        </BrowserRouter>
+        <CustomProvider>
+            <BrowserRouter>
+                <Header />
+                <Main />
+                <Footer />
+                <ToastContainer />
+            </BrowserRouter>
+        </CustomProvider>
     )
 }
 
